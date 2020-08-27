@@ -10,9 +10,9 @@ export function task8Old() {
   var obj = {
     nums: [0, 2, 5, 10, 15],
     fives: [],
-    calculateNumsFive: function () {
+    calculateNumsFive: function() {
       var self = this;
-      this.nums.forEach(function (v) {
+      this.nums.forEach(function(v) {
         if (v % 5 === 0) {
           self.fives.push(v);
         }
@@ -29,15 +29,11 @@ export function task8Old() {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export const task8New = () => {
-  let obj = {
+  const obj = {
     nums: [0, 2, 5, 10, 15],
     fives: [],
     calculateNumsFive() {
-      this.nums.forEach((v) => {
-        if (v % 5 === 0) {
-          this.fives.push(v);
-        }
-      });
+      this.fives = this.nums.filter((elem) => !(elem % 5));
       return this.fives;
     },
   };

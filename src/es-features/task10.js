@@ -6,7 +6,7 @@ function A(name) {
   this.name = name;
 }
 
-A.prototype.getName = function () {
+A.prototype.getName = function() {
   return this.name;
 };
 
@@ -18,23 +18,23 @@ function B(name, age) {
 B.prototype = Object.create(A.prototype);
 B.prototype.constructor = B;
 
-B.prototype.getName = function (text) {
+B.prototype.getName = function(text) {
   return A.prototype.getName.call(this) + ' ' + text;
 };
 
-B.prototype.getAge = function () {
+B.prototype.getAge = function() {
   return this.age;
 };
 
-B.defaultUser = function () {
+B.defaultUser = function() {
   return new B('test', 0);
 };
 
 Object.defineProperty(B.prototype, 'color', {
-  get: function () {
+  get: function() {
     return this._color;
   },
-  set: function (color) {
+  set: function(color) {
     this._color = color;
   },
 });
@@ -70,8 +70,7 @@ class newB extends newA {
   }
 
   getName(text) {
-    let arr = [super.getName(), text];
-    return arr.join(' ');
+    return `${super.getName()} ${text}`;
   }
 
   getAge() {
@@ -87,11 +86,11 @@ class newB extends newA {
   }
 
   set color(color) {
-    return (this._color = color);
+    this._color = color;
   }
 }
 
-export function task10New() {
+function task10New() {
   let b = new newB('Max', 12);
   console.log(b.getName('Best')); // Max Best
   console.log(b.getAge()); // 12

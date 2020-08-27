@@ -11,7 +11,7 @@ export function task7Old() {
   var obj = { test: 0 };
   var obj2 = { foo: 1, bar: 2 };
 
-  Object.keys(obj2).forEach(function (k) {
+  Object.keys(obj2).forEach(function(k) {
     obj[k] = obj2[k];
   });
 
@@ -22,13 +22,13 @@ export function task7Old() {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export const task7New = () => {
-  let obj = { test: 0 };
-  let obj2 = { foo: 1, bar: 2 };
+  const obj = { test: 0 };
+  const obj2 = { foo: 1, bar: 2 };
   return { ...obj, ...obj2 };
 };
-//second solution
+
 export const task7NewSecondOption = () => {
-  let obj = { test: 0 };
-  let obj2 = { foo: 1, bar: 2 };
+  const obj = { test: 0 };
+  const obj2 = { foo: 1, bar: 2 };
   return Object.assign({}, obj, obj2);
 };

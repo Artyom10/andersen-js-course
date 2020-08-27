@@ -16,12 +16,12 @@
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
 
-export const arrayDiff = (firstArr, secondArr) => {
+const arrayDiff = (firstArr, secondArr) => {
   let resultArr = [...firstArr, ...secondArr];
   let result = resultArr.filter(
-    (elem) =>
-      (firstArr.includes(elem) && secondArr.includes(elem) == false) ||
-      (secondArr.includes(elem) && firstArr.includes(elem) == false)
+    elem =>
+      (firstArr.includes(elem) && !secondArr.includes(elem)) ||
+      (secondArr.includes(elem) && !firstArr.includes(elem))
   );
   return result;
 };

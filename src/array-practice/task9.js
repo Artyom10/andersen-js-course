@@ -18,5 +18,5 @@ export const indexOfAll = (array, value) => {
       result.push(index);
     }
   });
-  return result.length === 0 ? [] : result;
+  return result;
 };

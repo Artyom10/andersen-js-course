@@ -15,6 +15,6 @@
  * console.log(any([0, 0, 0, 0])); -> false
  */
 
-const any = (array, callback = Boolean) => {
+export const any = (array, callback = Boolean) => {
   return array.some(callback);
 };

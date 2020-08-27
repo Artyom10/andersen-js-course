@@ -29,19 +29,18 @@ export function task6Old() {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export const task6New = () => {
-  let obj = {
+  const userModule = {
     name: 'Max',
     value: 100,
     role: { name: 'Admin' },
     cases: [{ id: '1' }],
   };
-  let {
+  const {
     name,
     value,
     role: { name: role },
+    cases: [{ id: firstCaseId }],
     isActive = false,
-  } = obj;
-  let [testArr] = obj.cases;
-  let { id: firstCaseId } = testArr;
+  } = userModule;
   return [name, value, role, isActive, firstCaseId];
 };
