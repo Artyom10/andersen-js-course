@@ -18,5 +18,4 @@ export function task11Old(obj, fieldName) {
 // Напишите реализацию функции task11Old на ESnext ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task11New() {
-}
+ export task11New = ((obj,fieldName) => Object.values(obj)[0] == null ? false : Object.values(obj)[0]; )
