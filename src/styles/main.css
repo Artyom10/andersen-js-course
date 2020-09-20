@@ -1,8 +1,193 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: url(https://logobaker.ru/media/uploads/userapi/logos/416/400_300_2112-harry-potter-logo-redesign.jpg)
+    center no-repeat;
+  background-size: cover;
+}
+
+div {
+  border: 1px solid black;
+  padding: 5px 15px;
 }
 
 h1 {
   text-align: center;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+  color: #ff1493;
+}
+
+.union {
+}
+
+header {
+  background-color: gold;
+  border: 5px solid rosybrown;
+  margin-top: 10px;
+  border-radius: 20px 20px 0 0;
+}
+
+/*Классы основных блоков */
+.GraphItems {
+  background-image: url(https://i.pinimg.com/736x/f8/5e/bf/f85ebf75e677546e3d097d317e7cad3b.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 280px;
+  overflow: scroll;
+
+  float: left;
+}
+
+.GraphRecipe {
+  background-image: url(https://images.ctfassets.net/usf1vwtuqyxm/7pYsQBLrZO6cj5jSeGpT22/94741df352b955684a8a21f55caeef71/web-header-game.jpg?fm=jpg);
+  background-size: cover;
+  height: 150px;
+  width: 100%;
+  border: 1px solid black;
+  overflow: scroll;
+}
+
+.GraphMagicWand {
+  background-color: yellowgreen;
+  overflow: scroll;
+
+  height: 130px;
+  width: 100%;
+}
+
+.GraphCrafting {
+  background-image: url(https://kremlinpalace.org/images/events/1579621677.jpg);
+  background-size: cover;
+
+  margin-left: 230px;
+
+  height: 500px;
+  width: 1143px;
+  overflow: scroll;
+}
+
+/*Класс блока зоны прикрепления элемента */
+/*#dropPlace {
+  border: 2px solid red;
+  height: 35px;
+  width: 150px;
+}*/
+
+#dropRecipePlace {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+.dropItemPlace {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+/*Класс имени основных блоков */
+.MainName {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+.items-list {
+  padding: 0;
+  margin: 5px;
+
+  list-style: none;
+}
+
+.ItemElem {
+  background-color: #e84545;
+
+  vertical-align: top;
+  font-size: 13px;
+  padding: 14px 40px;
+  margin: 5px;
+  margin-bottom: 5px;
+
+  border-radius: 3px;
+  font-family: 'Raleway', sans-serif;
+  border: 0;
+  cursor: grab;
+
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.1s linear;
+}
+
+.ItemElem:hover {
+  background-color: lime;
+}
+
+.tasks__item:last-child {
+  margin-bottom: 0;
+}
+
+.recipe-list {
+  padding: 0;
+  margin: 5px;
+
+  list-style: none;
+}
+
+.recipeElem {
+  background-color: darkcyan;
+  width: 300px;
+  vertical-align: top;
+  font-size: 13px;
+  padding: 14px 40px;
+  margin: 5px;
+  margin-bottom: 5px;
+
+  border-radius: 3px;
+  font-family: 'Raleway', sans-serif;
+  border: 0;
+  cursor: pointer;
+
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.1s linear;
+}
+
+.wandElem {
+  background-color: deeppink;
+  width: 300px;
+  vertical-align: top;
+  font-size: 13px;
+  padding: 14px 40px;
+  margin: 5px;
+  margin-bottom: 5px;
+
+  border-radius: 3px;
+  font-family: 'Raleway', sans-serif;
+  border: 0;
+  cursor: pointer;
+
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.1s linear;
+}
+
+#buttonWand,
+#buttonWaste,
+#buttonCreateItem,
+#buttonCreateRecipe {
+  background-color: forestgreen;
+  color: wheat;
+  text-align: center;
+  display: inline-block;
+  padding: 15px 32px;
 }

@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Andersen JS Course</title>
   </head>
   <body>
-    <h1>
-      Andersen JS Course
-    </h1>
+    <header>
+      <h1>
+        Создание волшебных палочек
+      </h1>
+    </header>
+    <hr />
+    <div class="union">
+      <div class="GraphRecipe">
+        <p class="MainName">Схемы</p>
+        <form id="createRecipePlace">
+        <label class="MainName">Создать схему</label>
+        <input type="text" id="nameOfNewRecipe" value="Название"> 
+        <input type="text" class="createRecipeInput" value="Первый предмет">
+        <input type="text" class="createRecipeInput" value="Второй предмет">
+        <button id="buttonCreateRecipe" type="submit">Создать схему</button>
+        <ul class="recipe-list" id="listOfRecipe">
+          <li class="recipeElem" >Первая схема</li>
+          <li class="recipeElem" >Вторая схема</li>
+        </ul>
+        </form>
+      </div>
+
+      <div class="GraphItems" id="testDrop">
+        <p class="MainName">Предметы</p>
+        <form id="createItemPlace">
+        <label class="MainName">Добавьте свой элемент</label>
+        <input type="text" id="createItemInput">
+        <button id="buttonCreateItem" type="submit">Добавить новый элемент</button>
+        <ul class="items-list" id="listOfItems">
+          <li class="ItemElem">Перо феникса
+            <button class="remove">RM</button>
+          </li>
+          <li class="ItemElem">Дуб
+            <button class="remove">RM</button>
+          </li>
+        </ul>
+      </form>
+      </div>
+      <div class="GraphCrafting">
+        <p class="MainName">Стол для крафтинга</p>
+        <button id="buttonWand">Создать волшебную палочку</button>
+        <button id="buttonWaste">Сбросить стол крафтинга</button>
+        <div id="dropPlace">
+           <p>Место для схемы</p>
+           <div id="dropRecipePlace"></div>
+           <p>Место для предмета</p>
+           <div class="dropItemPlace"></div>
+           <p>Место для второго предмета</p>
+           <div class="dropItemPlace"></div>
+        </div>
+      </div>
+      <div class="GraphMagicWand">
+        <p class="MainName">Волшебные палочки</p>
+        <ul class="wands-list" id="listOfWands"></ul>
+        <li class="wandElem">Первая палочка</li>
+      </div>
+    </div>
+    <hr class="Test" />
   </body>
 </html>
