@@ -37,7 +37,7 @@ const items = [
      id: Date.now() + 7,
     },
     {
-     name:'волос единорога',
+     name:'Волос единорога',
      id: Date.now() + 8,
     },
     {
