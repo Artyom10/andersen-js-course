@@ -9,7 +9,7 @@ export function allowDrop(event) {
   export function drop(event) {
     event.preventDefault();
     const data = event.dataTransfer.getData('text');
-    if (~event.target.childNodes.length) {
+    if (!event.target.childNodes.length) {
       event.target.appendChild(document.getElementById(data));
     }
   }
