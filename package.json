@@ -2,11 +2,14 @@
   "name": "andersen-js-course",
   "version": "1.0.0",
   "private": true,
+  "main": "src/server/index.js",
   "repository": "https://github.com/VictorDanilov/andersen-js-course.git",
   "author": "Viktor Danilov <wikslayer@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start-client": "webpack-dev-server --open",
+    "start-server": "node src/server/index.js",
+    "dev": "nodemon index.js",
     "build": "webpack",
     "lint": "eslint --debug src/",
     "lint:write": "eslint --debug src/ --fix",
@@ -39,12 +42,18 @@
     "file-loader": "^4.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "husky": "^2.4.0",
     "lint-staged": "^8.2.0",
+    "nodemon": "^2.0.4",
     "prettier": "^1.17.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.5.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7"
   }
 }
